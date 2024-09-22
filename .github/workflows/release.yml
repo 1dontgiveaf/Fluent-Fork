@@ -23,10 +23,14 @@ jobs:
         node-version: '20'
 
     - name: Setup PNPM
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@v2.4.1  # update
       with:
         version: 7.25.1
-        run_install: true
+        run_install: false
+    
+    - name: Install Dependencies
+      run: pnpm install
+      working-directory: ./  # maybe
     
     - name: Setup Aftman
       uses: ok-nick/setup-aftman@v0.3.0
