@@ -41,7 +41,7 @@ jobs:
       run: pnpm run bundle
       
     - name: Upload Release Assets
-      uses: alexellis/upload-assets@latest  # latest i think
+      uses: alexellis/upload-assets@0.4.1
       with:
         asset_paths: 'dist/main.rbxm,dist/main.lua'
       env:
